@@ -5,6 +5,8 @@ Date: 2026-08-21
 Remote: GE Universal (Samsung TV mode)
 Protocol: SAMSUNG (32-bit)
 
+Compatible with Samsung TV remotes (AA59-00741A, BN59-01199F series)
+
 ----------------------------------------
 Learned IR Codes:
 ----------------------------------------
@@ -14,6 +16,8 @@ LEFT  : 0xE0E0A659  (SAMSUNG, 32 bits)
 RIGHT : 0xE0E046B9  (SAMSUNG, 32 bits)
 OK    : 0xE0E016E9  (SAMSUNG, 32 bits)
 BACK  : 0xE0E0B44B  (SAMSUNG, 32 bits)
+HOME  : 0xE0E07887  (SAMSUNG, 32 bits)
+STAR  : 0xE0E0E41B  (SAMSUNG, 32 bits)
 
 ========================================
 Production Code Definitions:
@@ -25,6 +29,8 @@ Production Code Definitions:
 #define IR_RIGHT  0xE0E046B9ULL
 #define IR_OK     0xE0E016E9ULL
 #define IR_BACK   0xE0E0B44BULL
+#define IR_HOME   0xE0E07887ULL
+#define IR_STAR   0xE0E0E41BULL
 
 ========================================
 Roku Command Mapping:
@@ -38,17 +44,16 @@ LEFT      -> Left
 RIGHT     -> Right
 OK        -> Select
 BACK      -> Back
+HOME      -> Home
+STAR (*)  -> Info
 
 ========================================
 Hardware Setup:
 ========================================
 
-ESP32 (MAC: 8c:aa:b5:80:d2:80)
+ESP32 DevKit (30-pin)
   - GPIO 15 -> VS1838 DATA
   - 3.3V    -> VS1838 VCC
   - GND     -> VS1838 GND
-
-WiFi: JonOTron Studios
-Roku IP: 192.168.1.154
 
 ========================================
